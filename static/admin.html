@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NewsHub | Administração</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/admin.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>NEWS<span>HUB</span></h1>
+
+        <nav>
+            <a href="index.html">Portal</a>
+            <a href="admin.html">Administração</a>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+
+        <section class="admin-banner">
+            <span>PAINEL DE CONTROLE</span>
+            <h2>Gerenciar fontes de notícias</h2>
+            <p>Cadastre e atualize seus feeds RSS/XML.</p>
+        </section>
+
+        <section class="admin-estatisticas">
+
+            <div class="estatistica">
+                <span>Fontes cadastradas</span>
+                <h2 id="total-feeds">0</h2>
+            </div>
+
+            <div class="estatistica">
+                <span>Fontes ativas</span>
+                <h2 id="total-ativos">0</h2>
+            </div>
+
+        </section>
+
+        <section class="formulario-admin">
+
+            <h2>Adicionar nova fonte</h2>
+
+            <form id="form-feed">
+
+                <label for="nome">Nome do site</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Ex: BBC News"
+                    required
+                >
+
+                <label for="url">Endereço RSS/XML</label>
+
+                <input
+                    type="url"
+                    id="url"
+                    placeholder="https://exemplo.com/rss.xml"
+                    required
+                >
+
+                <label for="categoria">Categoria</label>
+
+                <select id="categoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Mundo">Mundo</option>
+                    <option value="Tecnologia">Tecnologia</option>
+                    <option value="Esportes">Esportes</option>
+                    <option value="Economia">Economia</option>
+                    <option value="Entretenimento">Entretenimento</option>
+                    <option value="Educação">Educação</option>
+                </select>
+
+                <button type="submit">
+                    Cadastrar fonte
+                </button>
+
+            </form>
+
+            <p id="mensagem-admin"></p>
+
+        </section>
+
+        <section class="lista-feeds">
+
+            <div class="titulo-secao">
+                <h2>Fontes cadastradas</h2>
+
+                <button id="recarregar-feeds">
+                    Atualizar lista
+                </button>
+            </div>
+
+            <div id="feeds-container">
+                Carregando fontes...
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        NewsHub © 2026 - Painel administrativo
+    </footer>
+
+</body>
+</html>

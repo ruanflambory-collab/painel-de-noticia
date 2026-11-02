@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NewsHub | Portal de Notícias</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>NEWS<span>HUB</span></h1>
+
+        <nav>
+            <a href="/">Início</a>
+            <a href="#noticias">Últimas notícias</a>
+            <a href="#categorias">Categorias</a>
+            <a href="admin.html">Administração</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <p>INFORMAÇÃO EM UM SÓ LUGAR</p>
+
+            <h2>O mundo acontece.<br>Você fica sabendo.</h2>
+
+            <span>
+                As principais notícias de diferentes fontes,
+                reunidas em um único portal.
+            </span>
+        </section>
+
+        <section class="noticias" id="noticias">
+
+            <div class="titulo-secao">
+                <div>
+                    <span class="subtitulo">FIQUE INFORMADO</span>
+                    <h2>Últimas notícias</h2>
+                </div>
+
+                <button id="atualizar">Atualizar notícias</button>
+            </div>
+
+            <div class="pesquisa">
+                <input
+                    type="search"
+                    id="pesquisa"
+                    placeholder="Pesquisar por título ou descrição..."
+                >
+            </div>
+
+            <div id="categorias" class="categorias">
+                <button class="filtro ativo" data-categoria="Todas">
+                    Todas
+                </button>
+                <button class="filtro" data-categoria="Mundo">
+                    Mundo
+                </button>
+                <button class="filtro" data-categoria="Brasil">
+                    Brasil
+                </button>
+                <button class="filtro" data-categoria="Tecnologia">
+                    Tecnologia
+                </button>
+                <button class="filtro" data-categoria="Esportes">
+                    Esportes
+                </button>
+            </div>
+
+            <p id="status"></p>
+
+            <div id="lista-noticias" class="cards">
+                <!-- JavaScript vai inserir as notícias aqui -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        NewsHub © 2026 - Desenvolvido com Rust
+    </footer>
+
+</body>
+</html>
